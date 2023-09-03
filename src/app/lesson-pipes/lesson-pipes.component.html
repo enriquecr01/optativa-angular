@@ -1,0 +1,59 @@
+<h1>Leccion de Pipes</h1>
+
+<h2>Pipes de fecha</h2>
+
+<div>
+    <p>{{ "2023/09/04 18:00" | date: "full" }} <label style="background-color: yellow;"> {{ "{{ '2023/09/04 18:00' | date: 'full' }}" }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "long" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "long" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "medium" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "medium" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "short" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "short" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "fullDate" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "fullDate" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "longDate" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "longDate" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "mediumDate" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "mediumDate" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "shortDate" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "shortDate" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "fullTime" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "fullTime" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "longTime" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "longTime" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "mediumTime" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "mediumTime" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "shortTime" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "shortTime" }}' }}  </label></p>
+    <p>{{ "2023/09/04 18:00" | date: "YYYY-MM-dd // HH:::::::mm" }} <label style="background-color: yellow;"> {{ '{{ "2023/09/04 18:00" | date: "YYYY-MM-dd  // HH:::::::mm" }} ' }}  </label></p>
+</div>
+
+<h2>Pipes de moneda</h2>
+
+<div>
+    <p> {{ 806.9845 | currency }} <label style="background-color: yellow;"> {{ "{{ 806.9845 | currency }} " }}  </label></p>
+    <p> {{ 806.9845 | currency:'JPY' }} <label style="background-color: yellow;"> {{ "{{ 806.9845 | currency:'JPY' }}" }}  </label></p>
+    <p> {{ 806.9845 | currency:'JPY':'code' }} <label style="background-color: yellow;"> {{ "{{ 806.9845 | currency:'JPY':'code' }}" }}  </label></p>
+    <p> {{ 806.9845 | currency:'MXN':'symbol':'3.0' }} <label style="background-color: yellow;"> {{ "{{ 806.9845 | currency:'MXN':'symbol':'3.0' }}" }}  </label></p> <!-- No decimals -->
+    <p> {{ 806.9845 | currency:'MXN':'symbol':'3.2-3' }} <label style="background-color: yellow;"> {{ "{{ 806.9845 | currency:'MXN':'symbol':'3.2-3' }}" }}  </label></p> <!-- numeroDeEnteros:FraccionMinima-FraccionMaxima -->
+</div>
+
+<h2>Pipes de porcentaje</h2>
+
+<div>
+    <p> {{ 0.54 | percent }} <label style="background-color: yellow;"> {{ "{{ 0.54 | percent }}" }}  </label></p>
+    <p> {{ 0.543 | percent:'1.1-2' }} <label style="background-color: yellow;"> {{ "{{ 0.543 | percent:'1.1-2' }}" }}  </label></p>
+    <p> {{ 0.543789 | percent:'1.2-2' }} <label style="background-color: yellow;"> {{ "{{ 0.543789 | percent:'1.2-2' }}" }}  </label></p> <!-- numeroDeEnteros:FraccionMinima-FraccionMaxima -->
+    <p> {{ 0.543789 | percent:'1.0' }} <label style="background-color: yellow;"> {{ "{{ 0.543789 | percent:'1.0' }}" }}  </label></p> <!-- No decimals -->
+    <p> {{ 0.545789 | percent:'1.0' }} <label style="background-color: yellow;"> {{ "{{ 0.545789 | percent:'1.0' }}" }}  </label></p> <!-- No decimals pero aplica redondeo-->
+</div>
+
+
+<h2>Pipes de formato</h2>
+
+<div>
+    <p> {{ '¿Quién es?' | uppercase }} <label style="background-color: yellow;"> {{ "{{ '¿Quién es?' | uppercase }}" }}  </label></p>
+    <p> {{ 'Soy Yo' | lowercase }} <label style="background-color: yellow;"> {{ "{{ 'Soy Yo' | lowercase }}" }}  </label></p>
+    <p> {{ '¿qué vienes a buscar?' | titlecase }} <label style="background-color: yellow;"> {{ "{{ '¿qué vienes a buscar?' | titlecase }}" }}  </label></p>
+</div>
+
+
+<h2>Otras Pipes de utilidad</h2>
+
+<div>
+    <p> {{ 3.14159265 | number: '3.1-2' }} <label style="background-color: yellow;"> {{ "{{ 3.14159265 | number: '3.1-2' }}" }}  </label></p>
+    <p> {{ 321.14159265 | number: '3.1-2' }} <label style="background-color: yellow;"> {{ "{{ 321.14159265 | number: '3.1-2' }}" }}  </label></p>
+    <p> {{ 4321.14159265 | number: '3.1-2' }} <label style="background-color: yellow;"> {{ "{{ 4321.14159265 | number: '3.1-2' }}" }}  </label></p>
+    <p> {{ { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } | json }} <label style="background-color: yellow;"> {{ "{{  { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } | json }}" }}  </label></p>
+    <p> {{ { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } }} <label style="background-color: yellow;"> {{ "{ 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } " }}  </label></p>
+</div>
