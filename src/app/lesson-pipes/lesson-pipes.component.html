@@ -39,7 +39,7 @@
 </div>
 
 
-<h2>Pipes de formato</h2>
+<h2>Pipes de formato de strings</h2>
 
 <div>
     <p> {{ '¿Quién es?' | uppercase }} <label style="background-color: yellow;"> {{ "{{ '¿Quién es?' | uppercase }}" }}  </label></p>
@@ -56,4 +56,15 @@
     <p> {{ 4321.14159265 | number: '3.1-2' }} <label style="background-color: yellow;"> {{ "{{ 4321.14159265 | number: '3.1-2' }}" }}  </label></p>
     <p> {{ { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } | json }} <label style="background-color: yellow;"> {{ "{{  { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } | json }}" }}  </label></p>
     <p> {{ { 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } }} <label style="background-color: yellow;"> {{ "{ 'artista': 'Juan Gabriel', 'cancion': 'Asi Fue' } " }}  </label></p>
+</div>
+
+<h2>Pipe Personalizada</h2>
+
+<div>
+    <p> {{ 'hello' | translate: 'es' }} <label style="background-color: yellow;"> {{ "{{ 'hello' | translate: 'fr' }}" }}  </label></p>
+    <p> {{ 'hau' | translate: 'fr' | uppercase }} <label style="background-color: yellow;"> {{ "{{ 'hau' | translate: 'es' | uppercase }}" }}  </label></p>
+    <p> {{ 'imfty' | translate: 'en' | lowercase }} <label style="background-color: yellow;"> {{ "{{ 'imfty' | translate: 'en' | lowercase }}" }}  </label></p>
+    <p> {{ 'recocer' | reversed }} <label style="background-color: yellow;"> {{ "{{ 'recocer' | reversed }}" }}  </label></p>
+    <p> {{ 'el gato de la suerte' | reversed }} <label style="background-color: yellow;"> {{ "{{ 'el gato de la suerte' | reversed }}" }}  </label></p>
+    <p> {{ 'imfty' | translate: 'fr' | reversed | uppercase }} <label style="background-color: yellow;"> {{ "{{ 'el gato de la suerte' | reversed }}" }}  </label></p>
 </div>

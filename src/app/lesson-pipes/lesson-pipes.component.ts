@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import myLocaleEs from '@angular/common/locales/es'
-import {registerLocaleData} from '@angular/common';
+import { registerLocaleData } from '@angular/common';
 
 registerLocaleData(myLocaleEs);
 
