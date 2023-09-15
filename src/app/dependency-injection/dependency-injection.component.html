@@ -1,0 +1,29 @@
+
+<h1>Inyeccion de dependencias</h1>
+
+<div>
+    <h2>Lista de usuarios</h2>
+    <ul>
+        <li *ngFor="let user of users" (click)="getUser(user.id)">
+            {{ user.name }} - {{ user.email }}
+        </li>
+    </ul>
+</div>
+
+
+<div>
+    <h2>Usuario seleccionado</h2>
+    <p><b>Nombre: </b> {{ selectedUser?.name }}</p>
+    <p><b>Nombre de usuario: </b> {{ selectedUser?.username }}</p>
+    <p><b>Email: </b> {{ selectedUser?.email }}</p>
+    <p><b>Telefono: </b> {{ selectedUser?.phone }}</p>
+    <p><b>Sitio Web: </b> {{ selectedUser?.website }}</p>
+    <p>
+        <b>Direccion: </b> 
+        {{ selectedUser?.address.street }} 
+        {{ selectedUser?.address.suite }} 
+        {{ selectedUser?.address.city }} 
+        {{ selectedUser?.address.zipcode }} 
+    </p>
+</div>
+

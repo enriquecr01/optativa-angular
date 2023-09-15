@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { LessonPipesComponent } from './lesson-pipes/lesson-pipes.component';
 import { TranslatePipe } from './lesson-pipes/translate.pipe';
 import { ReversedPipe } from './lesson-pipes/reversed.pipe';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LessonPipesComponent,
     TranslatePipe,
-    ReversedPipe
+    ReversedPipe,
+    DependencyInjectionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
